@@ -1,0 +1,14 @@
+{% extends app/base.html%}
+{%block content%}
+
+
+<h2 class="user-name">@{{user.username}}</h2>
+
+{{ user.is_superuser }}
+{%if user.is_superuser%}
+<p>superuser</p>
+{%else%}
+<p>nomaluser</p>
+{%endif%}
+
+{%endblock}
