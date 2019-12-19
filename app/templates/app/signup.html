@@ -1,0 +1,22 @@
+{%extends 'app/base.html'%}
+
+{%block content%}
+
+<h2>Registed User</h2>
+
+<form method="post" action="{%url 'app:signup' %}">
+    {%csrf_token%}
+    <label>user name</label>
+    {{form.username}}
+    {{form.username.errors}}
+    <br>
+    <label>Password(check)</label>
+    {{form.password2}}
+    {{form.password2.error2}}
+    <br>
+    <input type="submit" value="Register">
+</form>
+
+<p><a href="{%url 'app:login'%}">Please Login</a></p>
+
+{%endblock%}
